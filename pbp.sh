@@ -8,13 +8,28 @@ cd ../consumer-domain
 git pull
 bundle install
 
-echo "$(tput setaf 5)Pulling and bundling CB-Mobile...$(tput sgr0)"
-cd ../CB-Mobile
+echo "$(tput setaf 5)Pulling and bundling consumer-session...$(tput sgr0)"
+cd ../consumer-session
 git pull
 bundle install
 
-echo "$(tput setaf 5)Pulling and bundling Consumer-Session...$(tput sgr0)"
-cd ../consumer-session
+echo "$(tput setaf 5)Pulling and bundling domain-values...$(tput sgr0)"
+cd ../domain-values
+git pull
+bundle install
+
+echo "$(tput setaf 5)Pulling and bundling consumer-main...$(tput sgr0)"
+cd ../consumer-main
+git pull
+bundle install
+
+echo "$(tput setaf 5)Pulling and bundling consumer-profile...$(tput sgr0)"
+cd ../consumer-profile
+git pull
+bundle install
+
+echo "$(tput setaf 5)Pulling and bundling consumer-resume...$(tput sgr0)"
+cd ../consumer-resume
 git pull
 bundle install
 
