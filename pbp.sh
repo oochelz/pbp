@@ -3,6 +3,11 @@ cd js-global
 git pull
 bundle install
 
+echo "$(tput setaf 5)Pulling and bundling consumer-layouts...$(tput sgr0)"
+cd ../consumer-layouts
+git pull
+bundle install
+
 echo "$(tput setaf 5)Pulling and bundling consumer-domain...$(tput sgr0)"
 cd ../consumer-domain
 git pull
@@ -25,6 +30,11 @@ bundle install
 
 echo "$(tput setaf 5)Pulling and bundling consumer-profile...$(tput sgr0)"
 cd ../consumer-profile
+git pull
+bundle install
+
+echo "$(tput setaf 5)Pulling and bundling consumer-auth...$(tput sgr0)"
+cd ../consumer-auth
 git pull
 bundle install
 
