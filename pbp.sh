@@ -1,10 +1,5 @@
-echo "$(tput setaf 5)Pulling and bundling js-global...$(tput sgr0)"
-cd js-global
-git pull
-bundle install
-
 echo "$(tput setaf 5)Pulling and bundling consumer-layouts...$(tput sgr0)"
-cd ../consumer-layouts
+cd consumer-layouts
 git pull
 bundle install
 
@@ -25,21 +20,6 @@ bundle install
 
 echo "$(tput setaf 5)Pulling and bundling consumer-main...$(tput sgr0)"
 cd ../consumer-main
-git pull
-bundle install
-
-echo "$(tput setaf 5)Pulling and bundling consumer-profile...$(tput sgr0)"
-cd ../consumer-profile
-git pull
-bundle install
-
-echo "$(tput setaf 5)Pulling and bundling consumer-auth...$(tput sgr0)"
-cd ../consumer-auth
-git pull
-bundle install
-
-echo "$(tput setaf 5)Pulling and bundling consumer-resume...$(tput sgr0)"
-cd ../consumer-resume
 git pull
 bundle install
 
