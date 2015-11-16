@@ -1,11 +1,17 @@
 #!/usr/bin/env bash
 
-REPOS=(consumer-layouts consumer-domain consumer-session domain-values consumer-main)
+REPOS="consumer-layouts
+consumer-domain
+consumer-session
+domain-values
+consumer-main"
+
+ROOT=$(pwd)
 
 for dir in $REPOS
 do
   echo "$(tput setaf 5)Pulling and bundling ${dir}...$(tput sgr0)"
-  cd "$(pwd)/${dir}"
+  cd "${ROOT}/${dir}"
   git pull
   bundle install
 done
