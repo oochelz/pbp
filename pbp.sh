@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 echo "$(tput setaf 5)Pulling and bundling consumer-layouts...$(tput sgr0)"
 cd consumer-layouts
 git pull
