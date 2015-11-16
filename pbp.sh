@@ -1,14 +1,27 @@
-#!/usr/bin/env bash
+echo "$(tput setaf 5)Pulling and bundling consumer-layouts...$(tput sgr0)"
+cd consumer-layouts
+git pull
+bundle install
 
-REPOS=(consumer-layouts consumer-domain consumer-session domain-values consumer-main)
+echo "$(tput setaf 5)Pulling and bundling consumer-domain...$(tput sgr0)"
+cd ../consumer-domain
+git pull
+bundle install
 
-for dir in $REPOS
-do
-  echo "$(tput setaf 5)Pulling and bundling ${dir}...$(tput sgr0)"
-  cd "$(pwd)/${dir}"
-  git pull
-  bundle install
-done
+echo "$(tput setaf 5)Pulling and bundling consumer-session...$(tput sgr0)"
+cd ../consumer-session
+git pull
+bundle install
+
+echo "$(tput setaf 5)Pulling and bundling domain-values...$(tput sgr0)"
+cd ../domain-values
+git pull
+bundle install
+
+echo "$(tput setaf 5)Pulling and bundling consumer-main...$(tput sgr0)"
+cd ../consumer-main
+git pull
+bundle install
 
 echo "$(tput setaf 5)Powdering down and powdering up...$(tput sgr0)"
 powder down
